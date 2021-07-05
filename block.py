@@ -16,5 +16,5 @@ class Block:
         str(self.data)+str(self.timestamp)).encode()
 
         inner_hash=hashlib.sha256(header_bin).hexdigest().encode()
-        outer_hash=hashlib.sha265(inner_hash).hexdigest()
+        outer_hash=hashlib.sha256(inner_hash).hexdigest()
         return outer_hash
